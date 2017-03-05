@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="layer/jquery.min.js"></script>
+	<script src="layer/layer.js"></script>
+	<style>
+		#didi-btn {
+			width: 20%;
+			height:30px;
+			border-radius: 4px;
+			text-align: center;
+			margin: 0 auto;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+<button id="didi-btn">领滴滴打车券点击这里</button>
+
+<script>
+document.querySelector("#didi-btn").onclick = function () {
+//iframe层
+	layer.open({
+		type: 2,
+		title: '向上滑动页面',
+		shadeClose: true,
+		shade: 0.8,
+		area: ['70%', '90%'],
+		content: 'https://gsactivity.diditaxi.com.cn/gulfstream/activity/v2/giftpackage/index?g_channel=6526db30bf234c13d845267c771caf74' //iframe的url
+	});
+};
+</script>
+</body>
+</html>
